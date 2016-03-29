@@ -16,7 +16,7 @@ describe('ListItemForm component', () => {
     expect(wrapper.find('button').length).toEqual(1);
   })
 
-  it('should start with formValue state', () => {
+  it('should start with blank formValue state', () => {
     expect(wrapper.state().formValue).toEqual('');
   })
 

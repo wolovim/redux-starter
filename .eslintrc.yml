@@ -125,7 +125,7 @@ rules:
   # End Variables as of eslint 0.23.0 [2015-06-15]
 
   # Stylistic Issues
-  brace-style: [2, '1tbs']
+  brace-style: 0
   camelcase: 1
   comma-spacing: [2, {before: false, after: true}]
   comma-style: [2, 'last']

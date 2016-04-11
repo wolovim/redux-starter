@@ -5,7 +5,7 @@ module.exports = function(config) {
   config.set({
     basePath: '',
     frameworks: ['mocha'],
-    reporters: ['progress'],
+    reporters: ['spec'],
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,
@@ -15,12 +15,10 @@ module.exports = function(config) {
     autoWatchBatchDelay: 300,
 
     files: [
-      './test/*.spec.js',
       './test/**/*.spec.js'
     ],
 
     preprocessors: {
-      './test/*.spec.js': ['webpack']
       './test/**/*.spec.js': ['webpack']
     },
 

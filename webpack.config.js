@@ -23,6 +23,10 @@ module.exports = {
         include: __dirname
       },
       {
+        test: /\.json$/,
+        loader: 'json'
+      },
+      {
         test   : /\.woff|\.woff2|\.svg|.eot|\.ttf/,
         loader : 'url?prefix=font/&limit=10000'
       },
@@ -61,5 +65,10 @@ module.exports = {
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin()
-  ]
+  ],
+  externals: {
+    'cheerio': 'window',
+    'react/lib/ExecutionEnvironment': true,
+    'react/lib/ReactContext': true
+  }
 }

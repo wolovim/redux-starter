@@ -5,7 +5,7 @@ var config = require('./webpack.config');
 var path = require('path');
 
 var app = new (require('express'))();
-var port = 5000;
+var port = process.env.PORT || 5000;
 
 var compiler = webpack(config);
 app.use(webpackDevMiddleware(compiler, { noInfo: true, publicPath: config.output.publicPath }));

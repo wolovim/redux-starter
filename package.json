@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "preinstall": "npm run build",
-    "build": "webpack --config ./webpack.prod.config.js",
+    "build": "webpack --config ./webpack.prod.config.js --progress",
     "start": "node server.js",
     "test": "karma start --single-run",
     "test:watch": "karma start"

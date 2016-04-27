@@ -1,7 +1,5 @@
 const path = require('path')
 const webpack = require('webpack')
-var bourbon = require('bourbon').includePaths
-var neat = require('bourbon-neat').includePaths
 
 module.exports = {
   devtool: 'source-map',
@@ -52,8 +50,5 @@ module.exports = {
         loader: 'file-loader'
       }
     ]
-  },
-  sassLoader: {
-    includePaths: bourbon.concat(neat)
   }
 }

@@ -36,11 +36,11 @@ module.exports = {
       },
       {
         test: /\.png/,
-        loader: "url-loader?limit=100000&minetype=image/png"
+        loader: 'url-loader?limit=100000&minetype=image/png'
       },
       {
         test: /\.jpg/,
-        loader: "file-loader"
+        loader: 'file-loader'
       }
     ]
   },
@@ -64,12 +64,7 @@ module.exports = {
   plugins: [
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin(),
-    new webpack.DefinePlugin({
-      'process.env': {
-        "NODE_ENV": JSON.stringify(process.env.NODE_ENV)
-      }
-    })
+    new webpack.NoErrorsPlugin()
   ],
   externals: {
     'cheerio': 'window',

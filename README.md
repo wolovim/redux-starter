@@ -22,6 +22,3 @@ configure the remote destination with: `heroku git:remote -a <project-name>`,
 then `git push heroku master` your way to glory.
 
 An example deployment lives at https://redux-starter.herokuapp.com/.
-
-### Todo
-- Production webpack config file

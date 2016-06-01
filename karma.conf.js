@@ -15,11 +15,11 @@ module.exports = function(config) {
     autoWatchBatchDelay: 300,
 
     files: [
-      './test/**/*.spec.js'
+      './test/tests.webpack.js'
     ],
 
     preprocessors: {
-      './test/**/*.spec.js': ['webpack']
+      './test/tests.webpack.js': ['webpack']
     },
 
     webpack: webpackConfig,

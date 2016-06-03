@@ -4,7 +4,7 @@
   "description": "Starter kit for Redux web apps",
   "main": "index.js",
   "scripts": {
-    "preinstall": "npm run build",
+    "postinstall": "npm run build",
     "build": "webpack --config ./webpack.prod.config.js",
     "start": "node server.js",
     "test": "karma start --single-run",

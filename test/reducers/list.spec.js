@@ -4,58 +4,39 @@ import * as types from '../../src/actions';
 
 describe('list reducer', () => {
   it('should return the initial state', () => {
-    expect(
-      reducer(undefined, {})
-    ).toInclude(
+    const initialState = undefined;
+    const action = {};
+    const nextState = reducer(initialState, action);
+
+    expect(nextState.list).toEqual(
       {
-        list: {
-          items: ['example item']
-        }
+        items: ['example item']
       }
     );
   });
 
   it('should handle ADD_ITEM', () => {
-    expect(
-      reducer({}, {
-        type: types.ADD_ITEM,
-        item: 'example two'
-      })
-    ).toInclude(
-      {
-        list: {
-          items: [
-            'example item',
-            'example two'
-          ]
-        }
+    const initialState = {
+      list: {
+        items: [
+          'example item',
+          'example two'
+        ]
       }
-    );
+    };
+    const action = {
+      type: types.ADD_ITEM,
+      item: 'example three'
+    };
+    const nextState = reducer(initialState, action);
 
-    expect(
-      reducer(
-        {
-          list: {
-            items: [
-              'example item',
-              'example two'
-            ]
-          }
-        },
-        {
-          type: types.ADD_ITEM,
-          item: 'example three'
-        }
-      )
-    ).toInclude(
+    expect(nextState.list).toEqual(
       {
-        list: {
-          items: [
-            'example item',
-            'example two',
-            'example three'
-          ]
-        }
+        items: [
+          'example item',
+          'example two',
+          'example three'
+        ]
       }
     );
   });

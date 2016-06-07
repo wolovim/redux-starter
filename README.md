@@ -2,8 +2,10 @@
 
 Many of the choices made in this starter app are documented in this [blog post](https://quickleft.com/blog/redux-in-plain-english-building-boilerplate/).
 
+Looking to learn Redux? I walk through an example workflow [here](https://quickleft.com/blog/redux-plain-english-workflow/).
+
 ### Installation
-- Clone this repo
+- Clone this repo.
 - Run `npm install` to install dependencies.
 - Run `npm start` to start the dev server and visit `http://localhost:5000` to see the app.
 
